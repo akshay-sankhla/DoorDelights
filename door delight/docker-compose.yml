@@ -1,0 +1,65 @@
+version: '3'
+services:
+    eureka:
+      build: ./eureka
+      ports:
+      - 8761:8761
+    db:
+      image: mysql:latest
+      container_name: mysql-db1   
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+       
+      ports:
+        - "3305:3306"
+      restart: always
+
+      
+    #service 2: definition of your spring-boot app 
+    userservice:                        #it is just a name, which will be used only in this file.
+      image: user-service               #name of the image after dockerfile executes
+      container_name: user-service-app  #name of the container created from docker image
+      build:
+        context: ./userservice                          #docker file path (. means root directory)
+        dockerfile: Dockerfile              #docker file name
+      ports:
+        - "8081:8081"                       #docker containter port with your os port
+      restart: on-failure
+        
+      depends_on:                           #define dependencies of this app
+        - db
+        - eureka                                #dependency name (which is defined with this name 'db' in this file earlier)
+      environment:
+        SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db1:3306/user?createDatabaseIfNotExist=true
+        SPRING_DATASOURCE_USERNAME: root
+        SPRING_DATASOURCE_PASSWORD: root
+    #service 3:
+    favoriteservice:
+     build: ./favoriteservice
+     restart: on-failure
+     ports:
+      - 8088:8088
+     environment:
+      MONGO_HOST: mongo_db
+      MONGO_PORT: 27017
+      EUREKA_PORT: 8761
+      EUREKA_HOST: localhost
+     depends_on:                           #define dependencies of this app
+        - eureka
+        - mongo_db
+     links:
+      - mongo_db:FavouriteServicedb
+    mongo_db:
+     image: "mongo:4.4.3"
+     restart: always
+     ports:
+      - 27017:27017 
+
+   #service 3
+    searchservice:
+      build: ./searchservice
+      restart: on-failure
+      ports:
+      - 8012:8012
+      depends_on:                           #define dependencies of this app
+        - eureka

@@ -1,0 +1,189 @@
+::placeholder {
+	color: #7a7878 !important;
+	opacity: 1;
+	font-size: 18px !important;
+}
+.form-login {
+	background-color: rgba(248, 248, 248, 0.822);
+	width: 420px;
+	height: 460px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 15px;
+	border-color: #d2d2d2;
+	border-width: 5px;
+	color: black;
+
+	box-shadow: 0 1px 0 #cfcfcf;
+	position: absolute;
+	right: -30%;
+	backdrop-filter: blur(6px);
+	top: 35%;
+}
+.loginhead {
+	font-size: 30pt;
+}
+.form-control {
+	background: transparent !important ;
+	backdrop-filter: blur(5px);
+
+	font-size: 18px !important;
+	padding: 25px;
+	border-radius: 10px;
+}
+
+.text-white {
+	color: white !important;
+}
+.wrapper {
+	text-align: center;
+}
+.banner {
+	margin-top: 190px;
+	width: 420px;
+	font-size: 35pt;
+	font-weight: bold;
+	border: #d2d2d2;
+	/* background-color: rgba(0, 0, 0, 0.55); */
+	/* box-shadow: 0 1px 0 #cfcfcf; */
+	border-radius: 15px;
+	color: #ffffff;
+	padding: 16px;
+	margin-left: 150px;
+}
+.midfav {
+	position: absolute;
+	width: 981px;
+	height: 193px;
+	left: 122px;
+	top: 430px;
+	/* background-color: rgba(0, 0, 0, 0.55); */
+	font-family: Risque;
+	font-size: 55px;
+	line-height: 64px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	border-radius: 15px;
+	color: #e8f1fb;
+}
+.upperfooter {
+	position: absolute;
+	left: 1405.23px;
+	top: 826.71px;
+	background: rgba(17, 16, 16, 0.33);
+	border-radius: 28px;
+}
+
+.homebanner {
+	margin-top: 543px;
+}
+.ourserv {
+	color: white;
+	font-size: 35px;
+	padding-bottom: 25px;
+}
+.aboutus {
+	color: white;
+	font-size: 18px;
+	margin: 80px;
+}
+option {
+	/* Whatever color  you want */
+	background-color: #82caff;
+}
+* {
+	box-sizing: border-box;
+}
+
+.wrapperH {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.cardH {
+	width: 490px;
+	height: 370px;
+	border-radius: 100px;
+	padding: 2rem;
+	background: white;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	transition: 0.4s ease-out;
+	box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+	margin-top: 10%;
+}
+.cardH:hover {
+	transform: translateY(20px);
+}
+.cardH:hover:before {
+	opacity: 1;
+}
+.cardH:hover .infoH {
+	opacity: 1;
+	transform: translateY(0px);
+}
+.cardH:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 2;
+	transition: 0.5s;
+	opacity: 0;
+}
+.cardH img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 15px;
+}
+.cardH .infoH {
+	position: relative;
+	z-index: 3;
+	color: white;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: 0.5s;
+}
+.cardH .infoH h1 {
+	margin: 0px;
+}
+.cardH .infoH p {
+	letter-spacing: 1px;
+	font-size: 20px;
+	margin-top: 8px;
+}
+.cardH .infoH button {
+	padding: 0.6rem;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+	background: white;
+	color: black;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.4s ease;
+}
+.cardH .infoH button:hover {
+	background: dodgerblue;
+	color: white;
+}
+
+.aboutus{
+	margin-top: 7%;
+	font-size: 20pt;
+}
