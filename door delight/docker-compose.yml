@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
     eureka:
       build: ./eureka
@@ -45,7 +45,7 @@ services:
       EUREKA_PORT: 8761
       EUREKA_HOST: localhost
      depends_on:                           #define dependencies of this app
-        - eureka
+        - eureka  
         - mongo_db
      links:
       - mongo_db:FavouriteServicedb
@@ -56,10 +56,16 @@ services:
       - 27017:27017 
 
    #service 3
-    searchservice:
+    searcheservice:
       build: ./searchservice
       restart: on-failure
       ports:
       - 8012:8012
       depends_on:                           #define dependencies of this app
-        - eureka
+        - eureka  
+ #service 4
+networks:
+  dd_network:
+
+
+    
