@@ -4,7 +4,7 @@ Pull the Project to local Repository and run docker compose file to start Backen
 
 FullStack WebPage where SpringBoot is used for Backend and ReactJs is used for Frontend.
 
-DoorDelights is a web platform which uses **Zomato Api** for collecting Restaurant details and Display on Browser. It also provide functionality to Search Restaurant on basis the basis of location, Cuisine and to _save_ and _delete_ any Restaurant to users favourite list for registered User.
+DoorDelights is a web platform which uses **Zomato Api** for collecting Restaurant details and Display on Browser. It also provide functionality to Search Restaurant on the basis of location, Cuisine and to _save_ and _delete_ any Restaurant to users favourite list for registered User.
 
 This project having **5 MicroServices** 
 
