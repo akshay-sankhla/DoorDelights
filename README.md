@@ -1,4 +1,4 @@
-# DoorDelights
+# DoorDelights Project
 
 Pull the Project to local Repository and run docker compose file to start Backend Services.
 
